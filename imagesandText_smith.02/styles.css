@@ -1,0 +1,36 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+	height: 100%;
+	width: 100%;
+	overflow: hidden; /* no scrollbars for a clean full-screen look */
+	font-family: "Walter Turncoat", cursive;
+}
+.viewer {
+	position: relative; /* important: anchors the absolute-positioned children */
+	height: 100vh; /* full viewport height */
+	width: 100vw; /* full viewport width */
+}
+/* The image: covers the entire viewer */
+.viewer img {
+	position: absolute;
+	inset: 0; /* shorthand for top/right/bottom/left: 0 */
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* fill without distortion; may crop */
+}
+/* The caption: centered at the bottom with rounded edges */
+.viewer .description {
+  position: absolute;
+  left: 50%;
+  bottom: 2rem; /* slightly above the very bottom for breathing room */
+  transform: translateX(-50%);
+  
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  color: #fff; /* white text */
+  
+  background-color: rgba(96, 64, 143, 0.9); /* soft purple with slight transparency */
+  border-radius: 1rem; /* rounded edges */
+  backdrop-filter: blur(4px); /* subtle modern look (optional) */
+}
