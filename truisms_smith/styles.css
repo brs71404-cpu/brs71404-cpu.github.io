@@ -1,0 +1,42 @@
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style for the body to cover the entire screen */
+body, html {
+  height: 100%;
+  overflow: hidden; /* Disable scrolling */
+  position: relative;
+}
+
+/* Full-screen video styling */ 
+.background-video 
+{ position: absolute; /* Allows positioning of video to cover the entire background */
+	top: 0; 
+	left: 0; 
+	width: 100vw; /* Full width of the viewport */ 
+	height: 100vh; /* Full height of the viewport */ 
+	object-fit: cover; /* Ensures video covers the whole viewport without distortion */ 
+	z-index: -1; /* Places video behind the text box */ 
+}
+
+/* Text box at bottom center */
+.text-box {
+  	position: absolute;
+  	left: 50%;                  /* center horizontally */
+  	bottom: 15%;                /* adjust this to place it roughly in the bottom third */
+  	transform: translateX(-50%);/* truly center the box */
+  	background-color: #9caf88;  /* Sage green background */
+ 	 color: black;
+ 	 font-weight: bold;
+ 	 padding: 20px;
+  	border-radius: 10px;
+  	text-align: center;
+  	max-width: 80%;
+  	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  	user-select: none;        /* prevents highlighting / text selection */
+  	cursor: default;          /* keeps the regular arrow cursor (not the I-beam) */         
+}
